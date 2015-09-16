@@ -6,5 +6,13 @@
 <struts>
     <constant name="struts.enable.DynamicMethodInvocation" value="false" />
     <constant name="struts.devMode" value="true" />
+   <!-- <constant name="struts.objectFactory" value="spring" />-->
     <!-- Add packages here -->
+    <package name="default" extends="json-default">
+        <action name="login" class="action.LoginAction">
+            <result type="json">
+            <param name="root">result</param>
+            </result>
+        </action>
+    </package>
 </struts>
